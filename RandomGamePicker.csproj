@@ -43,9 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\FileAccess.cs" />
+    <Compile Include="Classes\GameData.cs" />
+    <Compile Include="Classes\Interface Classes\CSVAccess.cs" />
     <Compile Include="Classes\Interface Classes\OutputToConsole.cs" />
     <Compile Include="Classes\Interface Classes\OutputToTestDataStorage.cs" />
+    <Compile Include="Classes\Interface Classes\TestDataAccess.cs" />
     <Compile Include="Interfaces\IFileAccess.cs" />
     <Compile Include="Interfaces\IOutput.cs" />
     <Compile Include="Classes\Menu.cs" />

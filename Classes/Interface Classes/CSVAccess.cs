@@ -8,7 +8,7 @@ using RandomGamePicker.Interfaces;
 
 namespace RandomGamePicker.Classes.Interface_Classes
 {
-    public class FileAccess : IFileAccess
+    public class CSVAccess : IFileAccess
     {
         /*
         Untestable using asserts

@@ -1,7 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace RandomGamePicker.Tests
+
+namespace RandomGamePickerTests
 {
     [TestClass]
     public class RandomGamePickerTests

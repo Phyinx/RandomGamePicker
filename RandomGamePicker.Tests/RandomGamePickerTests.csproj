@@ -51,8 +51,14 @@
   </Choose>
   <ItemGroup>
     <Compile Include="TestDataStorage.cs" />
-    <Compile Include="RGP.Tests.cs" />
+    <Compile Include="RandomGamePicker.Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RandomGamePicker.csproj">
+      <Project>{74c38b08-01e8-4c78-a90b-3c92b48afb96}</Project>
+      <Name>RandomGamePicker</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
