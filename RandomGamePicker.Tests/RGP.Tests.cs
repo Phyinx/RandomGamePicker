@@ -4,11 +4,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace RandomGamePicker.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class RandomGamePickerTests
     {
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }
