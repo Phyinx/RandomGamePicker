@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using RandomGamePicker.Interfaces;
 
-namespace RandomGamePicker.Classes
+namespace RandomGamePicker.Classes.Interface_Classes
 {
-    public class FileAccess
+    public class FileAccess : IFileAccess
     {
         /*
         Untestable using asserts
