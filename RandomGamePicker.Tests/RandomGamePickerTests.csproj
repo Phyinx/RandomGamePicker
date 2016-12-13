@@ -50,6 +50,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="OutputToTestDataStorage.cs" />
+    <Compile Include="TestDataAccess.cs" />
     <Compile Include="TestDataStorage.cs" />
     <Compile Include="RandomGamePicker.Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

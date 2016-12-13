@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using RandomGamePicker.Interfaces;
 
-namespace RandomGamePicker.Classes.Interface_Classes
+namespace RandomGamePickerTests
 {
-    class TestDataAccess : IFileAccess
+    public class OutputToTestDataStorage : IOutput
     {
 
     }

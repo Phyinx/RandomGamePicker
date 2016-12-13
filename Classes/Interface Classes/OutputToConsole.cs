@@ -7,7 +7,7 @@ using RandomGamePicker.Interfaces;
 
 namespace RandomGamePicker.Classes.Interface_Classes
 {
-    class OutputToConsole : IOutput
+    public class OutputToConsole : IOutput
     {
 
     }
