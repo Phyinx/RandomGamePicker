@@ -7,7 +7,7 @@ namespace RandomGamePicker.Tests
     public class RandomGamePickerTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void When_the_program_starts_the_number_of_available_games_will_be_printed()
         {
 
         }

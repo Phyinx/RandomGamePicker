@@ -43,9 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileAccess.cs" />
-    <Compile Include="Menu.cs" />
-    <Compile Include="Picker.cs" />
+    <Compile Include="Classes\FileAccess.cs" />
+    <Compile Include="Classes\Interface Classes\OutputToConsole.cs" />
+    <Compile Include="Classes\Interface Classes\OutputToTestDataStorage.cs" />
+    <Compile Include="Interfaces\IFileAccess.cs" />
+    <Compile Include="Interfaces\IOutput.cs" />
+    <Compile Include="Classes\Menu.cs" />
+    <Compile Include="Classes\Picker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
