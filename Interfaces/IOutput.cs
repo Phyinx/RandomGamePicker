@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RandomGamePicker.Interfaces
 {
-    interface IOutput
+    public interface IOutput
     {
 
     }
