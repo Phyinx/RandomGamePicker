@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RandomGamePicker.Interfaces;
 
 namespace RandomGamePicker.Classes
 {
-    class Menu
+    public class Menu
     {
+        public Menu(IOutput Output)
+        {
 
+        }
     }
 }

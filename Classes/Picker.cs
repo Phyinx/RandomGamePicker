@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RandomGamePicker.Classes
 {
-    class Picker
+    public class Picker
     {
 
     }

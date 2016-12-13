@@ -7,7 +7,7 @@ using RandomGamePicker.Interfaces;
 
 namespace RandomGamePickerTests
 {
-    public class TestDataAccess : IFileAccess
+    class TestDataAccess : IFileAccess
     {
 
     }
