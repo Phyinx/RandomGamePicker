@@ -14,16 +14,7 @@ namespace RandomGamePicker.Classes
 
         public GameData(IFileAccess File)
         {
-            if (System.IO.File.Exists(Path))
-            {
-                GameList = File.ReadCsv(Path);
-            }
-            else
-            {
-                //Throw an exception here if the path is invalid
-                //ADD A TEST FOR THIS
-                //throw new System.ArgumentException("Path invalid");
-            }
+            GameList = File.ReadCsv(Path);
         }
 
         public string[] GetGameList()

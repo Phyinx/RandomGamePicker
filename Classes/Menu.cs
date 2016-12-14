@@ -28,7 +28,9 @@ namespace RandomGamePicker.Classes
 
         public void Run()
         {
-            m_Output.Print( CountGames().ToString() );
+            string textToPrint = "Available games: ";
+            textToPrint += CountGames().ToString();
+            m_Output.Print(textToPrint);
         }
 
         //Private functions

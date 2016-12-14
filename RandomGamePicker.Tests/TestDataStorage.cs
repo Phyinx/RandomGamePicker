@@ -9,7 +9,7 @@ namespace RandomGamePickerTests
     class TestDataStorage
     {
         static private string[] m_Data; //Holds the mockCSV data for the file accessor to pull.
-        static private string[] m_ConsoleOutput = new string[200];
+        static private string[] m_ConsoleOutput;
 
         static private int m_ConsoleOutputIndex = 0;
         static private int m_CommandsIndex = 0;
@@ -17,10 +17,11 @@ namespace RandomGamePickerTests
         static private int[] m_Commands; //Remember to convert these to strings before giving them to Menu
         
 
-        public TestDataStorage(string[] mock_data, int[] commands)
+        public TestDataStorage(string[] mock_data, int[] commands, int size_of_console_output = 200)
         { //Only used in the tests, for setting up data and commands
             m_Data = mock_data;
             m_Commands = commands;
+            m_ConsoleOutput = new string[size_of_console_output];
         }
 
         public TestDataStorage()

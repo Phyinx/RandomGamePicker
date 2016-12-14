@@ -14,7 +14,7 @@ namespace RandomGamePickerTests
         Menu Menu;
         public void Setup(string[] mock_data, int[] commands)
         {
-            TestData = new TestDataStorage(mock_data, commands); //Store mock CSV into storage class
+            TestData = new TestDataStorage(mock_data, commands, 1); //Store mock CSV into storage class
 
             DataAccess = new TestDataAccess(); //Create a mock file reader that conforms to IFileAccess interface
 
