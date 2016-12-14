@@ -7,25 +7,42 @@ namespace RandomGamePickerTests
     [TestClass]
     public class RandomGamePickerTests
     {
-        TestDataAccess TestData;
-        GameData StoredMockData;
+        TestDataStorage TestData;
+        TestDataAccess DataAccess;
+        GameData StoredMockCSV;
         OutputToTestDataStorage LogOutput;
         Menu Menu;
 
         [TestInitialize]
-        public void TestInitalise()
+        public void Setup(string[] mock_data, int[] commands)
         {
-            TestData = new TestDataAccess();
-            StoredMockData = new GameData(TestData);
+            TestData = new TestDataStorage(mock_data, commands); //Store mock CSV into storage class
 
-            LogOutput = new OutputToTestDataStorage();
-            Menu = new Menu(LogOutput);
+            DataAccess = new TestDataAccess(); //Create a mock file reader that conforms to IFileAccess interface
+
+            StoredMockCSV = new GameData(DataAccess); //Create GameData class (holds game data to avoid repeated reads of CSV)...
+                                                     //and give it something that conforms to IFileAccess, in this case the...
+                                                     //mock file reader, which reads the mock csv data in TestDataStorage
+
+            LogOutput = new OutputToTestDataStorage(); //Create an output class that conforms to IOutput interface
+                                                       //This will allow for menu output to be logged...
+                                                       //without the need for two separate menu classes
+
+            Menu = new Menu(LogOutput); //Create the menu with something that conforms to IOutput
         }
 
         [TestMethod]
         public void When_the_program_starts_the_number_of_available_games_will_be_printed()
         {
+            string[] mock_data = {"Game 1", "Game 2", "Game 3", "Game 4", "Game 5" };
+            int[] commands = {};
 
+            Setup(mock_data, commands);
+            Menu.Run();
+
+            string[] console_output = TestData.GetConsoleOutput();
+            string[] expected_output = { "Available games: 5" };
+            CollectionAssert.AreEqual(expected_output, console_output);
         }
     }
 }

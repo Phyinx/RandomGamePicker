@@ -9,7 +9,20 @@ namespace RandomGamePicker.Classes
 {
     public class Menu
     {
+        public enum Accepted_Commands
+        {
+            pick_game = '1',
+            list_games = '2',
+            add_game = '3',
+            remove_game = '4'
+        }
+
         public Menu(IOutput Output)
+        {
+
+        }
+
+        public void Run()
         {
 
         }
