@@ -9,6 +9,15 @@ namespace RandomGamePickerTests
 {
     public class OutputToTestDataStorage : IOutput
     {
-
+        private TestDataStorage m_dataStorage;
+        public OutputToTestDataStorage()
+        {
+            m_dataStorage = new TestDataStorage();
+        }
+        
+        public void Print(string textToPrint)
+        {
+            m_dataStorage.AddToConsoleOutput(textToPrint);
+        }
     }
 }

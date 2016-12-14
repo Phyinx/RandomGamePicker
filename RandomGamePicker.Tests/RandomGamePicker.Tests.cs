@@ -12,8 +12,6 @@ namespace RandomGamePickerTests
         GameData StoredMockCSV;
         OutputToTestDataStorage LogOutput;
         Menu Menu;
-
-        [TestInitialize]
         public void Setup(string[] mock_data, int[] commands)
         {
             TestData = new TestDataStorage(mock_data, commands); //Store mock CSV into storage class
@@ -28,7 +26,8 @@ namespace RandomGamePickerTests
                                                        //This will allow for menu output to be logged...
                                                        //without the need for two separate menu classes
 
-            Menu = new Menu(LogOutput); //Create the menu with something that conforms to IOutput
+            Menu = new Menu(LogOutput, StoredMockCSV); //Create the menu with something that conforms to IOutput
+                                                       //Also give it a GameData so the menu has access to the game list
         }
 
         [TestMethod]

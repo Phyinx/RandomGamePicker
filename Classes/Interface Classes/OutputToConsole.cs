@@ -9,6 +9,9 @@ namespace RandomGamePicker.Classes.Interface_Classes
 {
     public class OutputToConsole : IOutput
     {
+        public void Print(string textToPrint)
+        {
 
+        }
     }
 }

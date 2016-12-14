@@ -8,6 +8,6 @@ namespace RandomGamePicker.Interfaces
 {
     public interface IFileAccess
     {
-
+        string[] ReadCsv(string pathToCsv);
     }
 }

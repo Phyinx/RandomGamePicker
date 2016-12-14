@@ -9,6 +9,10 @@ namespace RandomGamePickerTests
 {
     class TestDataAccess : IFileAccess
     {
-
+        public string[] ReadCsv(string pathToCsv)
+        {
+            TestDataStorage data = new TestDataStorage();
+            return data.GetData();
+        }
     }
 }

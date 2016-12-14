@@ -17,14 +17,25 @@ namespace RandomGamePicker.Classes
             remove_game = '4'
         }
 
-        public Menu(IOutput Output)
-        {
+        private IOutput m_Output;
+        private GameData m_Games;
 
+        public Menu(IOutput Output, GameData GameData)
+        {
+            m_Output = Output;
+            m_Games = GameData;
         }
 
         public void Run()
         {
+            m_Output.Print( CountGames().ToString() );
+        }
 
+        //Private functions
+        private int CountGames()
+        {
+            string[] games = m_Games.GetGameList();
+            return games.Count();
         }
     }
 }
