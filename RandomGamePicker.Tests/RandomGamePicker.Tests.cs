@@ -60,9 +60,15 @@ namespace RandomGamePickerTests
             Menu.Run();
 
             string[] console_output = TestData.GetConsoleOutput();
-            string[] expected_output = { "Available games: 5",
-                                         "1: Pick game/n2: Show list of games/n3: Add game/n4: Remove game"};
-            Assert.AreEqual(expected_output[1], console_output[1]);
+            string[] expected_output = { "1: Pick game",
+                                         "2: Show list of games",
+                                         "3: Add game",
+                                         "4: Remove game" };
+
+            for (int i = 0; i < expected_output.Length; i++)
+            {
+                Assert.AreEqual(expected_output[i], console_output[ (i + 1) ]); //+1 is to skip "Available Games" printing
+            }
         }
     }
 }
