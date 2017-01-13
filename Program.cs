@@ -19,6 +19,10 @@ namespace RandomGamePicker
 
             OutputToConsole ConsoleOutput = new OutputToConsole();
             Menu MenuSystem = new Menu(ConsoleOutput, Games);
+
+            MenuSystem.Run();
+
+            Console.ReadLine();
         }
     }
 }

@@ -10,7 +10,7 @@ namespace RandomGamePicker.Classes
     public class GameData
     {
         static private string[] GameList;
-        private string Path = "/m_Games.csv";
+        private string Path = "./Games.csv";
 
         public GameData(IFileAccess File)
         {

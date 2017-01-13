@@ -31,6 +31,14 @@ namespace RandomGamePicker.Classes
             string textToPrint = "Available games: ";
             textToPrint += CountGames().ToString();
             m_Output.Print(textToPrint);
+
+            PrintMenu();
+        }
+
+        private void PrintMenu()
+        {
+            string menuDisplay = "1: Pick game/n2: Show list of games/n3: Add game/n4: Remove game";
+            m_Output.Print(menuDisplay);
         }
 
         //Private functions

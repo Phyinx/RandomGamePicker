@@ -14,7 +14,7 @@ namespace RandomGamePickerTests
         Menu Menu;
         public void Setup(string[] mock_data, int[] commands)
         {
-            TestData = new TestDataStorage(mock_data, commands, 1); //Store mock CSV into storage class
+            TestData = new TestDataStorage(mock_data, commands, 200); //Store mock CSV into storage class
 
             DataAccess = new TestDataAccess(); //Create a mock file reader that conforms to IFileAccess interface
 
@@ -41,7 +41,28 @@ namespace RandomGamePickerTests
 
             string[] console_output = TestData.GetConsoleOutput();
             string[] expected_output = { "Available games: 5" };
-            CollectionAssert.AreEqual(expected_output, console_output);
+            Assert.AreEqual(expected_output[0], console_output[0]);
+
+            /*
+                Change CollectionAssert to only test the FIRST index (0) of array.
+                First item in array should always be available games.
+                Change other test to only check second index (1).
+            */
+        }
+
+        [TestMethod]
+        public void When_the_program_starts_print_a_menu()
+        {
+            string[] mock_data = { "Game 1", "Game 2", "Game 3", "Game 4", "Game 5" };
+            int[] commands = { };
+
+            Setup(mock_data, commands);
+            Menu.Run();
+
+            string[] console_output = TestData.GetConsoleOutput();
+            string[] expected_output = { "Available games: 5",
+                                         "1: Pick game/n2: Show list of games/n3: Add game/n4: Remove game"};
+            Assert.AreEqual(expected_output[1], console_output[1]);
         }
     }
 }

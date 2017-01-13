@@ -11,7 +11,7 @@ namespace RandomGamePicker.Classes.Interface_Classes
     {
         public void Print(string textToPrint)
         {
-
+            Console.WriteLine(textToPrint);
         }
     }
 }
