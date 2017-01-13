@@ -74,7 +74,12 @@ namespace RandomGamePickerTests
             Setup(mock_data, commands);
             Menu.Run();
 
+            int generator_pick = TestData.GetGeneratedNumber();
             string[] console_output = TestData.GetConsoleOutput();
+            string expectedConsoleOutput = mock_data[generator_pick];
+
+            Assert.AreEqual(expectedConsoleOutput, console_output[5]); //0 = Available Games
+                                                                       //1-thru-4 = Menu
         }
     }
 }
