@@ -42,12 +42,6 @@ namespace RandomGamePickerTests
             string[] console_output = TestData.GetConsoleOutput();
             string[] expected_output = { "Available games: 5" };
             Assert.AreEqual(expected_output[0], console_output[0]);
-
-            /*
-                Change CollectionAssert to only test the FIRST index (0) of array.
-                First item in array should always be available games.
-                Change other test to only check second index (1).
-            */
         }
 
         [TestMethod]
@@ -69,6 +63,18 @@ namespace RandomGamePickerTests
             {
                 Assert.AreEqual(expected_output[i], console_output[ (i + 1) ]); //+1 is to skip "Available Games" printing
             }
+        }
+
+        [TestMethod]
+        public void A_game_is_randomly_picked_from_the_list()
+        {
+            string[] mock_data = { "Game 1", "Game 2", "Game 3", "Game 4", "Game 5" };
+            int[] commands = { };
+
+            Setup(mock_data, commands);
+            Menu.Run();
+
+            string[] console_output = TestData.GetConsoleOutput();
         }
     }
 }
