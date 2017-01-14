@@ -43,11 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\GameData.cs" />
+    <Compile Include="Classes\Interface Classes\CSVAccess.cs" />
+    <Compile Include="Classes\Interface Classes\OutputToConsole.cs" />
+    <Compile Include="Interfaces\IFileAccess.cs" />
+    <Compile Include="Interfaces\IOutput.cs" />
+    <Compile Include="Classes\Menu.cs" />
+    <Compile Include="Classes\Picker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Games.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
